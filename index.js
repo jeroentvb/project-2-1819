@@ -1,6 +1,11 @@
 const app = require('express')
 
 app()
+  // .use((req, res, next) => {
+  //   res.setHeader('Cache-Control', 'max-age=' + 30 * 24 * 60 * 60)
+  //   next()
+  // })
+
   .set('views', 'templates/pages')
   .set('view engine', 'ejs')
   .use(app.static('static'))
@@ -15,7 +20,5 @@ function index (req, res) {
 }
 
 function notFound (req, res) {
-  res.status(404).render('error', {
-    message: 'Page not found'
-  })
+  res.status(404).send('Page not found')
 }
