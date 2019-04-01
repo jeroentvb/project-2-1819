@@ -1,0 +1,27 @@
+{
+  "name": "project-2-1819",
+  "version": "0.1.0",
+  "description": "Volkswagen enhancements",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jeroentvb/project-2-1819.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jeroentvb/project-2-1819/issues"
+  },
+  "homepage": "https://github.com/jeroentvb/project-2-1819#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
