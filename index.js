@@ -1,11 +1,13 @@
+const compression = require('compression')
 const app = require('express')
 
 app()
-  // .use((req, res, next) => {
-  //   res.setHeader('Cache-Control', 'max-age=' + 30 * 24 * 60 * 60)
-  //   next()
-  // })
+  .use((req, res, next) => {
+    res.setHeader('Cache-Control', 'max-age=' + 30 * 24 * 60 * 60)
+    next()
+  })
 
+  // .use(compression())
   .set('views', 'templates/pages')
   .set('view engine', 'ejs')
   .use(app.static('static'))

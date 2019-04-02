@@ -12,6 +12,11 @@ html {
     -webkit-text-size-adjust: 100%
 }
 
+body input:focus, body button:focus, body a:focus {
+  outline: none !important;
+  border: 3px solid #FF9300 !important;
+}
+
 body {
     margin: 0
 }
