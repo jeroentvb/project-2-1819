@@ -7,7 +7,7 @@ app()
     next()
   })
 
-  // .use(compression())
+  .use(compression())
   .set('views', 'templates/pages')
   .set('view engine', 'ejs')
   .use(app.static('static'))
