@@ -14,9 +14,14 @@ Testen zijn uitgevoerd met een gesimuleerde internetsnelheid van 200/200 kb up/d
 | Laadtijd | 4.3 min | 2.6 min | 6s | 2.5 min |
 | Opmerking | | | | 214.2kb bespaard |
 
-| | gzip on the fly | Cache header, page reload | Totaal bespaarde tijd op first load (t.o.v. lokaal) | Totaal bespaarde laadtijd op reload |
-| --- | --- | --- | --- | --- |
-| Laadtijd | 2 min | 5s | 36s | 1s |
+| | gzip on the fly | Cache header, page reload | Afbeeldingen in .webp | Ongebruikte css verwijderd | Afbeeldingen uitgeschakeld |
+| --- | --- | --- | --- | --- | --- |
+| Laadtijd | 2 min | 5s | 1.1 min | 48s | 39s |
+
+#### Zwaarste assets
+* Afbeeldingen
+* Fonts
+* JS (scripts.min.js)
 
 ## Focus styles
 Focus styles zijn belangrijk voor mensen die alleen een keyboard kunnen gebruiken. Zonder kunnen ze niet zien op welk element ze zitten.
@@ -39,4 +44,7 @@ Ik heb er voor het voorbeeld voor gekozen om binnen de huidige kleur blauw te bl
 
 | Voldoende grote voor tekst | Voldoende voor alles |
 | --- | --- |
-| [![contrast](bin/contrast-text.png)](color.review/check/FFFFFF-007FA9) [#FFFFFF - #007FA9](color.review/check/FFFFFF-007FA9) | [![contrast](bin/contrast-text.png)](color.review/check/FFFFFF-006080) [#FFFFFF - #006080](color.review/check/FFFFFF-006080) |
+| [![contrast](bin/contrast-text.png)](color.review/check/FFFFFF-007FA9) [#FFFFFF - #007FA9](color.review/check/FFFFFF-007FA9) | [![contrast](bin/contrast-all-text.png)](color.review/check/FFFFFF-006080) [#FFFFFF - #006080](color.review/check/FFFFFF-006080) |
+
+Dit is hoe het er uit zou zien met aangepaste kleuren.
+![good-contrast](bin/good-contrast.png)
