@@ -38,33 +38,42 @@
 
 ## Snelheid optimalisaties
 Testen zijn uitgevoerd met een gesimuleerde internetsnelheid van 200/200 kb up/down.  
-De volgende tabel bevat de standaardwaarden
+De volgende tabel bevat de standaardlaadtijden.
 
 | | volkswagen.nl first load | volkswagen.nl reload | Lokaal zonder aanpassingen | Lokaal reload zonder aanpassingen |
 | --- | --- | --- | --- | --- |
 | Laadtijd | 4.3 min | 4.3s | 2.6 min | 6s |
 
-<!-- | | gzip on the fly | Cache header, page reload | Afbeeldingen in .webp | Ongebruikte css verwijderd | Afbeeldingen uitgeschakeld |
-| --- | --- | --- | --- | --- | --- |
-| Laadtijd | 2 min | 5s | 1.1 min | 1.1 min | 39s | -->
+De volgende tabel bevat de geoptimaliseerde laadtijden voor de lokale website.
 
-De totaal bespaarde laadtijd ten opzichte van de lokale website zonder aanpassingen is 1.8 minuten. Deze optimalisatie is behaald door de volgende optimalisaties:
-* Afbeeldingen serveren in `.webp` formaat (2.2mb naar 714kb)
-* Ongebruikte CSS verwijderen (40kb naar 12kb gzipped naar 10kb brotli)
-* Statische assets precompressen (brotli)
+|  | .webp | gzip | brotli | Reload met cache-control header |
+| --- | --- | --- | --- | --- |
+| Laadtijd | 1.4 min | 1.1 min | 1 min | 5s |
 
-Voor snellere herlaad tijden is een caching header toegevoegd aan alle assets.
+#### Bespaarde bestandsgroottes
+De optimalisaties hebben de volgende download size bespaard:
+
+|  | Originele grootte | Met `.webp` |
+| --- | --- | --- |
+| [Images](static/images) | 2.2mb | 714kb |
+
+|  | Originele grootte | gzip | brotli |
+| --- | --- | --- | --- |
+| [CSS](static/css) | 40kb | 12kb | 10kb |
+
+|  | Originele grootte | gzip | brotli |
+| --- | --- | --- | --- |
+| [JS](static/js) | 483kb | 147kb | 126kb |
 
 #### Zwaarste assets
 * Afbeeldingen
 * Fonts
-* JS (scripts.min.js) (echt 21.000 regels js nodig?)
-* CSS (styles.min.js) (echt 14.500 regels css nodig?)
+* JS (s[cripts.min.js](static/js/cripts.min.js)) (echt 21.000 regels js nodig?)
+* CSS ([styles.min.js](static/css/styles.min.js)) (echt 14.500 regels css nodig?)
 
-| |
-| --- |
-| ![speed before changes](bin/local-no-changes.png) |
-|
+| Before | After |
+| --- | --- |
+| ![speed before changes](bin/local-no-changes.png) | ![speed after changes](bin/local-all-changes.png) |
 
 ## Focus styles
 Focus styles zijn belangrijk voor mensen die alleen een keyboard kunnen gebruiken. Zonder kunnen ze niet zien op welk element ze zitten.

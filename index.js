@@ -8,9 +8,7 @@ app()
     next()
   })
 
-  .use(gzipStatic(path.join(__dirname, '/static'), {
-    enableBrotli: true
-  }))
+  .use(gzipStatic(path.join(__dirname, '/static')))
   .set('views', 'templates/pages')
   .set('view engine', 'ejs')
   .use(app.static('static'))
