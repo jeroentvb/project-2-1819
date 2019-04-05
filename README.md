@@ -25,6 +25,7 @@
 * [Snelheid optimalisaties](#snelheid-optimalisaties)
 * [Focus styles](#focus-styles)
 * [Contrast](#contrast)
+* [Audits](#audits)
 
 ## Top 5 optimalisaties
 1. Afbeeldingen optimaliseren (`.webp`)
@@ -35,6 +36,7 @@
 
 
 6. Contrast blauw-wit en tekst op afbeeldingen niet goed
+7. Update de JS libraries. Sommige hebben bekende kwetsbaarheden...
 
 ## Snelheid optimalisaties
 Testen zijn uitgevoerd met een gesimuleerde internetsnelheid van 200/200 kb up/down.  
@@ -100,3 +102,11 @@ Ik heb er voor het voorbeeld voor gekozen om binnen de huidige kleur blauw te bl
 
 Dit is hoe het er uit zou zien met aangepaste kleuren.
 ![good-contrast](bin/good-contrast.png)
+
+## Audits
+| Volkswagen.nl | Lokaal geoptimaliseerde versie |
+| --- | --- |
+| [![audit volkswagen.nl](bin/audit-volkswagen.nl.png)](bin/audit-volkswagen.nl.png) | [![audit lokaal volkswagen.nl](bin/audit-local-volkswagen.nl.png)](bin/audit-local-volkswagen.nl.png)
+
+### Pagespeed
+[![volkswagen.nl pagespeed](bin/pagespeed.png)](bin/pagespeed.png)
