@@ -1,5 +1,6 @@
-const compression = require('compression')
+const gzipStatic = require('connect-gzip-static')
 const app = require('express')
+const path = require('path')
 
 app()
   .use((req, res, next) => {
@@ -7,7 +8,7 @@ app()
     next()
   })
 
-  // .use(compression())
+  .use(gzipStatic(path.join(__dirname, '/static')))
   .set('views', 'templates/pages')
   .set('view engine', 'ejs')
   .use(app.static('static'))
